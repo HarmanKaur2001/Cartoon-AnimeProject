@@ -67,7 +67,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.cartoonanimeproject/com.example.cartoonanimeproject.HelloApplication
+                                com.example.cartoonanimeproject/com.example.cartoonanimeproject.Main
                             </mainClass>
                         </configuration>
                     </execution>

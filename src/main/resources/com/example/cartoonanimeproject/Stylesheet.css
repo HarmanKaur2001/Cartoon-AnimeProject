@@ -1,0 +1,17 @@
+.root
+{
+    -fx-font-size: 13pt;
+    -fx-font-family: Algerian;
+    -fx-background-color: #f48aa0;
+}
+
+.label
+{
+    -fx-text-fill: black;
+
+}
+
+#header
+{
+    -fx-font-size: 30pt;
+}
