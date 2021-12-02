@@ -54,7 +54,7 @@ public class DetailsOfCartoonController {
 
 
 
-    public void loadCartoonInfo( String malId){
+    public void loadCartoonInfo(String malId){
 
         CartoonTotalInfo cartoonInfo = null;
         try {

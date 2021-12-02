@@ -10,6 +10,5 @@ module com.example.cartoonanimeproject {
     exports com.example.cartoonanimeproject;
     exports com.example.cartoonanimeproject.Controllers;
     opens com.example.cartoonanimeproject.Controllers to com.google.gson, javafx.fxml;
-
 }
 
