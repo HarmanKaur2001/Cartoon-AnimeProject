@@ -6,7 +6,7 @@ module com.example.cartoonanimeproject {
     requires java.net.http;
 
 
-    opens com.example.cartoonanimeproject to javafx.fxml;
+    opens com.example.cartoonanimeproject to com.google.gson, javafx.fxml;
     exports com.example.cartoonanimeproject;
     exports com.example.cartoonanimeproject.Controllers;
     opens com.example.cartoonanimeproject.Controllers to com.google.gson, javafx.fxml;

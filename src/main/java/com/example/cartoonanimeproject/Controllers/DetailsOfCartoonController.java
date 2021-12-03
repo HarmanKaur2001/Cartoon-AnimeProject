@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -26,23 +27,21 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         private Label scoreLabel;
 
         @FXML
-        private Label startDateLabel;
+        private Label durationLabel;
 
         @FXML
-        private Label endDateLabel;
-
-        @FXML
-        private ListView<String> synopsisListView;
+        private TextArea synopsisTextArea;
 
         @FXML
         private Label animeTitleLabel;
-
 
         @FXML
         private TextField urlTextField;
 
         @FXML
         private ImageView imageView;
+
+
 
 
         public void loadCartoonInfo(String malId)
@@ -61,20 +60,16 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         airingLabel.setText(cartoonInfo.getAiring());
         typeLabel.setText(cartoonInfo.getType());
         scoreLabel.setText(cartoonInfo.getScore());
-        startDateLabel.setText(cartoonInfo.getStartDate());
-        endDateLabel.setText(cartoonInfo.getEndDate());
-        synopsisListView.getItems().addAll(cartoonInfo.getSynopsis());
+        durationLabel.setText(cartoonInfo.getDuration());
+        typeLabel.setText(cartoonInfo.getType());
+        synopsisTextArea.setText(cartoonInfo.getSynopsis());
         imageView.setImage(new Image(cartoonInfo.getImageUrl()));
         urlTextField.setText(cartoonInfo.getUrl());
-
-
-
-
-
-    }
+        }
     @FXML
     private void returnBack(ActionEvent event) throws IOException, InterruptedException {
         SceneChanger.changeScenes(event,"CartoonSearchView.fxml");
-
-    }
+        }
 }
+
+

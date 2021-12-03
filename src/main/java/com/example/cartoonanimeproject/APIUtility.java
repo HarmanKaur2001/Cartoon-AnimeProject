@@ -11,7 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class APIUtility {
-    /**public static APIResponse getCartoonFromJson()
+    public static APIResponse getCartoonFromJson()
     {
         //create a GSON object
         Gson gson = new Gson();
@@ -29,16 +29,16 @@ public class APIUtility {
             e.printStackTrace();
         }
         return response;
-    }*/
+    }
 
     /**
      * This will call the anime api with the specified search term
      */
     public static APIResponse getCartoonsData(String search) throws IOException, InterruptedException {
-        search = search.trim().replace(" ", "%20");
+        //search = search.trim().replace(" ", "%20");
 
-        //String uri = "https://api.jikan.moe/v3/search/anime?q="+search;
-        String uri = "https://api.jikan.moe/v3/search/anime?q=shinchan";
+        String uri = "https://api.jikan.moe/v3/search/anime?q="+search;
+        //String uri = "https://api.jikan.moe/v3/search/anime?q=shinchan";
 
 
         HttpClient client = HttpClient.newHttpClient();
@@ -66,7 +66,7 @@ public class APIUtility {
     public static CartoonTotalInfo getMoreInfo(String malId) throws IOException, InterruptedException {
         malId = malId.trim().replace(" ", "%20");
 
-        String uri = "https://api.jikan.moe/v3/search/anime?i="+malId;
+        String uri = "https://api.jikan.moe/v3/anime/"+malId;
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
