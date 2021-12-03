@@ -1,5 +1,5 @@
 package com.example.cartoonanimeproject;
 
 public interface InitializeCartoonSearch {
-    public void loadCartoonInfo(String malId);
+     void loadCartoonInfo(String malId);
 }

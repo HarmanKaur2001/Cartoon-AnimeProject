@@ -50,7 +50,8 @@ public class APIUtility {
         APIResponse apiResponse = null;
 
         try{
-            apiResponse  = gson.fromJson(jsonString, APIResponse.class);
+            apiResponse = gson.fromJson(jsonString, APIResponse.class);
+            //apiResponse  = gson.fromJson(jsonString, APIResponse.class);
         }catch(Exception e)
         {
             e.printStackTrace();
@@ -76,6 +77,4 @@ public class APIUtility {
         Gson gson = new Gson();
         return gson.fromJson(response.body(), CartoonTotalInfo.class);
     }
-
-
 }

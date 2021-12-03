@@ -1,9 +1,6 @@
 package com.example.cartoonanimeproject.Controllers;
 
-import com.example.cartoonanimeproject.APIUtility;
-import com.example.cartoonanimeproject.CartoonSearch;
-import com.example.cartoonanimeproject.CartoonTotalInfo;
-import com.example.cartoonanimeproject.SceneChanger;
+import com.example.cartoonanimeproject.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -14,7 +11,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 
-public class DetailsOfCartoonController {
+public class DetailsOfCartoonController implements InitializeCartoonSearch {
 
         @FXML
         private Label episodeLabel;
@@ -48,13 +45,8 @@ public class DetailsOfCartoonController {
         private ImageView imageView;
 
 
-
-
-
-
-
-
-    public void loadCartoonInfo(String malId){
+        public void loadCartoonInfo(String malId)
+        {
 
         CartoonTotalInfo cartoonInfo = null;
         try {
