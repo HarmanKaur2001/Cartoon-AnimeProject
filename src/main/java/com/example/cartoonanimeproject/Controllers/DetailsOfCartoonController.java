@@ -41,6 +41,11 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         @FXML
         private ImageView imageView;
 
+        @FXML
+        private Label ratingLabel;
+
+
+
 
 
 
@@ -65,6 +70,7 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         synopsisTextArea.setText(cartoonInfo.getSynopsis());
         imageView.setImage(new Image(cartoonInfo.getImageUrl()));
         urlTextField.setText(cartoonInfo.getUrl());
+        ratingLabel.setText(cartoonInfo.getRated());
         }
     @FXML
     private void returnBack(ActionEvent event) throws IOException, InterruptedException {
