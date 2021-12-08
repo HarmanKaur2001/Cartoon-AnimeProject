@@ -2,7 +2,7 @@
 {
     -fx-font-size: 13pt;
     -fx-font-family: Algerian;
-    -fx-background-color: #f48aa0;
+    -fx-background-color: linear-gradient(to bottom , #6EBDC4, #CE647D, #47BEEB,#FB0476,#F1EF41);
 }
 
 .label

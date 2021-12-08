@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,6 +26,10 @@ public class SceneChanger {
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Image icon = new Image(CartoonSearch.class.getResourceAsStream("default.jpg"));
+        stage.getIcons().add(icon);
+        stage.setTitle(" Details");
+
         stage.setScene(scene);
         stage.show();
     }

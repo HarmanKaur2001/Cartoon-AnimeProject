@@ -37,8 +37,8 @@ public class CartoonTotalInfo {
     @SerializedName("members")
     private String members;
 
-    @SerializedName("rated")
-    private String rated;
+    @SerializedName("rating")
+    private String rating;
 
     @SerializedName("score")
     private String score;
@@ -46,6 +46,27 @@ public class CartoonTotalInfo {
     @SerializedName("duration")
     private String duration;
 
+    @SerializedName("rank")
+    private String rank;
+
+    @SerializedName("popularity")
+    private String popularity;
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(String popularity) {
+        this.popularity = popularity;
+    }
 
     public String getDuration() {
         return duration;
@@ -143,12 +164,12 @@ public class CartoonTotalInfo {
         this.members = members;
     }
 
-    public String getRated() {
-        return rated;
+    public String getRating() {
+        return rating;
     }
 
-    public void setRated(String rated) {
-        this.rated = rated;
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public String getScore() {

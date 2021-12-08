@@ -36,6 +36,15 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         private Label animeTitleLabel;
 
         @FXML
+        private Label rankLabel;
+
+        @FXML
+        private Label popularityLabel;
+
+        @FXML
+        private Label membersLabel;
+
+        @FXML
         private TextField urlTextField;
 
         @FXML
@@ -43,11 +52,6 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
 
         @FXML
         private Label ratingLabel;
-
-
-
-
-
 
         public void loadCartoonInfo(String malId)
         {
@@ -70,7 +74,10 @@ public class DetailsOfCartoonController implements InitializeCartoonSearch {
         synopsisTextArea.setText(cartoonInfo.getSynopsis());
         imageView.setImage(new Image(cartoonInfo.getImageUrl()));
         urlTextField.setText(cartoonInfo.getUrl());
-        ratingLabel.setText(cartoonInfo.getRated());
+        ratingLabel.setText(cartoonInfo.getRating());
+        membersLabel.setText(cartoonInfo.getMembers());
+        rankLabel.setText(cartoonInfo.getRank());
+        popularityLabel.setText(cartoonInfo.getPopularity());
         }
     @FXML
     private void returnBack(ActionEvent event) throws IOException, InterruptedException {
