@@ -13,9 +13,10 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CartoonSearchView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        Image icon = new Image(getClass().getResourceAsStream("default.jpg"));
+
+        Image icon = new Image(CartoonSearch.class.getResourceAsStream("default.jpg"));
         stage.getIcons().add(icon);
-        stage.setTitle("Cartoon-Anime Details");
+        stage.setTitle(" Cartoon-Anime Search");
         stage.setScene(scene);
         stage.show();
     }

@@ -8,7 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cartoonanimeproject.Controllers.CartoonSearchViewController">
@@ -19,7 +22,7 @@
                <children>
                   <Label prefHeight="33.0" prefWidth="353.0" text="Serach Your Favorite Anime or Cartoon" textFill="#068da8eb">
                      <font>
-                        <Font name="Arial Italic" size="14.0" />
+                        <Font name="Algerian" size="16.0" />
                      </font>
                   </Label>
                   <TextField fx:id="searchTextField" promptText="Enter Here" />
@@ -30,19 +33,33 @@
                </padding>
             </HBox>
          </top>
-         <left>
-            <Label fx:id="msgLabel" prefHeight="28.0" prefWidth="163.0" text="NO Cartoon Found" BorderPane.alignment="BOTTOM_RIGHT" />
-         </left>
          <bottom>
-            <Button fx:id="getMoreInfoButton" mnemonicParsing="false" onAction="#getMoreInfo" prefHeight="52.0" prefWidth="371.0" text="Get More Info" BorderPane.alignment="CENTER" />
+            <BorderPane BorderPane.alignment="CENTER">
+               <right>
+                  <Button fx:id="getMoreInfoButton" mnemonicParsing="false" onAction="#getMoreInfo" prefHeight="52.0" prefWidth="371.0" text="Get More Info" BorderPane.alignment="CENTER" />
+               </right>
+               <left>
+                  <Label fx:id="msgLabel" prefHeight="45.0" prefWidth="365.0" text="NO Cartoon Found" BorderPane.alignment="CENTER" />
+               </left>
+            </BorderPane>
          </bottom>
          <center>
-            <HBox BorderPane.alignment="CENTER">
+            <GridPane alignment="CENTER_RIGHT" prefHeight="655.0" prefWidth="836.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true" />
-                  <ListView fx:id="cartoonListView" prefHeight="493.0" prefWidth="445.0" />
+                  <HBox>
+                     <children>
+                        <ImageView fx:id="imageView" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+                        <ListView fx:id="cartoonListView" prefHeight="493.0" prefWidth="445.0" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </GridPane>
          </center>
       </BorderPane>
    </children>

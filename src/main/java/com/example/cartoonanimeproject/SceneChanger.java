@@ -28,7 +28,7 @@ public class SceneChanger {
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Image icon = new Image(CartoonSearch.class.getResourceAsStream("default.jpg"));
         stage.getIcons().add(icon);
-        stage.setTitle(" Details");
+        stage.setTitle("Details");
 
         stage.setScene(scene);
         stage.show();
